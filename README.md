@@ -1,5 +1,5 @@
 # Wiegotcha Build Guide
-A simple guide for beginners. The guide created by Mike Kelly at exfil.co is much more succinct if you are already experienced. I recommend supplementing this guide with Mike's to fully understand this build if you are a beginner. This was my first time using Raspberry Pi at all. All hardware and software design can be found there as well. All credits go to Mike for his furtherance of this project, which was originally created by Bishop Fox. I live in a small dorm, so usage of tools in this guide is kept to a bare minimum. If you see any mistakes or have any suggestions for this guide, please let me know. 
+The guide created by Mike Kelly at exfil.co is much more succinct if you are already experienced. I recommend supplementing this guide with Mike's to fully understand this build if you are a beginner. This was my first time using Raspberry Pi at all. All hardware and software design can be found there as well. All credits go to Mike for his furtherance of this project, which was originally created by Bishop Fox. I live in a small dorm, so usage of tools in this guide is kept to a bare minimum. If you see any mistakes or have any suggestions for this guide, please let me know. 
 
 ## What I used in my build:
 
