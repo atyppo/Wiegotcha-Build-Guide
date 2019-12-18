@@ -5,7 +5,7 @@ The guide created by Mike Kelly at exfil.co is much more succinct if you are alr
 
 ##### HID 5375 Long-Range Reader (~$100-$250 used on eBay)
 I recommend purchasing this used on eBay. Some search terms to use include "5375AGN00," "maxiprox" and "HID 5375."
-I purchased a brand new reader. I managed to find a seller who was willing to sell one with an offer for $250, which is at the upper end of what used readers sell for, so I decided to purchase a new reader instead.
+I purchased a brand new reader. I managed to find a seller who was willing to sell a new unit with an offer for $250, which is at the upper end of what used readers sell for, so I purchased it instead.
 
 ##### Raspberry Pi 3 Model 3 ($34.99 w/ Amazon-provided discount as of 10/16/18)
 This is what's used to interpret the info from the reader and create a Wi-Fi network to view the stolen credentials. More info available in Mike's post at exfil.co.
