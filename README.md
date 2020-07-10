@@ -1,5 +1,5 @@
 # Wiegotcha Build Guide
-The guide created by Mike Kelly at exfil.co is much more succinct if you are already experienced. I recommend supplementing this guide with Mike's to fully understand this build if you are a beginner. This was my first time using Raspberry Pi at all. All hardware and software design can be found there as well. All credits go to Mike for his furtherance of this project, which was originally created by Bishop Fox. I live in a small dorm, so usage of tools in this guide is kept to a bare minimum. If you see any mistakes or have any suggestions for this guide, please let me know. 
+The guide created by Mike Kelly at exfil.co is much more succinct if you are already experienced. I recommend supplementing this guide with Mike's to fully understand this build if you are a beginner. I used Wiegotcha as a PoC to demonstrate T5577's insecurity. This was my first time using Raspberry Pi at all. All hardware and software design can be found there as well. All credits go to Mike for his furtherance of this project, which was originally created by Bishop Fox. I live in a small dorm, so usage of tools in this guide is kept to a bare minimum. If you see any mistakes or have any suggestions for this guide, please let me know. 
 
 ## What I used in my build:
 
@@ -8,7 +8,7 @@ I recommend purchasing this used on eBay. Some search terms to use include "5375
 I purchased a brand new reader. I managed to find a seller who was willing to sell a new unit with an offer for $250, which is at the upper end of what used readers sell for, so I purchased it instead.
 
 ##### Raspberry Pi 3 Model 3 ($34.99 w/ Amazon-provided discount as of 10/16/18)
-This is what's used to interpret the info from the reader and create a Wi-Fi network to view the stolen credentials. More info available in Mike's post at exfil.co.
+This is what's used to interpret the info from the reader and create a Wi-Fi network to view the credentials. More info available in Mike's post at exfil.co.
 
 ##### Tabiger Soldering Iron Kit ($16.96 as of 10/16/18)
 I didn't originally think I would need this, since this guide was intended to be solder-free. The level converters I purchased appeared to be pre-soldered but were not when I received them. You may not need this if you already have one or are able to find pre-soldered ones. 
@@ -22,7 +22,7 @@ Although these appear to already be soldered in the product image, THEY ARE NOT.
 Amazon link: https://www.amazon.com/gp/product/B07DCVFYJT/ref=oh_aui_detailpage_o08_s00?ie=UTF8&psc=1
 
 ##### Battery Pack with USB and 5V Output ($33.99 as of 10/16/18)
-Not much to say here. Battery pack comes with a charger and a Y-cable to power the reader's board. I used pre-spliced cables because of my limited access to tools. Micro-USB cable needed to power the Pi.
+Not much to say here. Battery pack comes with a charger and a Y-cable to power the reader's board. I used pre-spliced cables because of my limited access to tools. Micro-USB cable will be needed to power the Pi.
 
 Amazon link: https://www.amazon.com/gp/product/B00ME3ZH7C/ref=oh_aui_detailpage_o09_s00?ie=UTF8&psc=1
 
@@ -47,12 +47,12 @@ This device is used to calibrate the clock so accurate timestamps are printed wh
 Amazon link: https://www.amazon.com/gp/product/B00HF4NUSS/ref=oh_aui_detailpage_o08_s01?ie=UTF8&psc=1
 
 ##### 16GB MicroSD Card ($6.80 as of 10/16/18)
-Not much to say here. When you receive the card, format to FAT format. Card must be at least 8GB in size. I chose 16GB in case I needed extra storage.
+Not much to say here. When you receive the card, format to FAT format. Card must be at least 8GB in size. I chose 16GB in case I needed extra storage because of the negligible difference in price.
 
 Amazon link: https://www.amazon.com/gp/product/B004ZIENBA/ref=oh_aui_detailpage_o09_s00?ie=UTF8&psc=1
 
 ##### Vibrating Motor ($5.22 as of 10/16/18)
-Entirely optional. It causes the reader to vibrate instead of emit a noise when a card is read. This can be found cheaper elsewhere, but I tried to include as many Amazon links as possible to make it simple to order everything. I purchased it, but chose not to install it because I am not experienced at soldering. Mike's post details how to install this.
+Entirely optional. It causes the reader to vibrate instead of emit a noise when a credential is read. This can be found cheaper elsewhere, but I tried to include as many Amazon links as possible to make it simple to order everything. I purchased it, but chose not to install it because I am not experienced at soldering. Mike's post details how to install this.
 
 Amazon link: https://www.amazon.com/gp/product/B00OKCPXOC/ref=oh_aui_detailpage_o08_s01?ie=UTF8&psc=1
 
@@ -70,7 +70,7 @@ Amazon link: https://www.amazon.com/gp/product/B00006IC2L/ref=oh_aui_detailpage_
 
 3) Connect the jumper wires to the header pins on the level converter, then connect to the header pins on the Raspberry Pi. Use Mike's diagram found [here.](https://i2.wp.com/exfil.co/wp-content/uploads/2017/01/diagram.gif?ssl=1) I highly recommend using the same colors he uses for simplicity.
 
-4) Plug the SD Card into your computer. Format it as a FAT card. I was not able to do this without opening Command Prompt for whatever reason. I'm running Windows 10. I used `Format /FS:FAT [INSERT YOUR DRIVE LETTER WITH COLON HERE]`
+4) Plug the SD Card into your computer. Format it as a FAT card. I was not able to do this without opening Command Prompt for whatever reason. I'm running Windows 10. I used `Format /FS:FAT [INSERT YOUR DRIVE LETTER WITH COLON HERE]`in CMD.
 
 5) Download the image (found under Step 1 of Easy Mode) from the Github repository found [here.](https://github.com/lixmk/Wiegotcha) I unzipped it using 7zip. I used Win32 Disk Imager to write the image to the SD card. Select the image file, then select the FAT-formatted SD Card's Drive Letter. 
 
@@ -84,4 +84,4 @@ Amazon link: https://www.amazon.com/gp/product/B00006IC2L/ref=oh_aui_detailpage_
 
 10) Put dip switch 4 in the SW1 set of switches in the off (down) position if you wish for the reader to not beep (it will regardless upon startup) when reading cards. This needs to be turned on if you wish for it to vibrate. 
 
-11) Once this is done, visit 192.168.150.1 with your preferred browser and test with a card to ensure everything works. If the proper facility code and serial number shows up, you're done! You can use the hex value to clone this badge using a Proxmark 3. 
+11) Once this is done, visit 192.168.150.1 with your preferred browser and test with a credential to ensure everything works. If the proper facility code and serial number shows up, you're done! You can use the hex value to clone a credential using a Proxmark 3. 
